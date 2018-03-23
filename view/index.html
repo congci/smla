@@ -1,0 +1,26 @@
+<div>
+
+    <form type="post"  method="post" id="gyms">
+        <input type="text" name="gyms_name" id="gyms_name" value="<?php echo $test?>"/>
+        <button type="button">post</button>
+    </form>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(e){
+            var params = {"gyms_name" : $("#gyms_name").val()}
+            $.ajax({
+                type: "POST",
+                url: "http://127.0.0.1:8082/api/gymsUpdateInfo",
+                data: JSON.stringify(params),
+                dataType : "json",
+                success: function(respMsg){
+                }
+            });
+        });
+    });
+
+
+
+</script>
