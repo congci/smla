@@ -11,7 +11,20 @@
  
  3、模版视图使用的简单的注射变量然后extract解析。
  
- 4、文件目录
+ 
+ 4、检验规则类似语法：
+ 
+ ```
+ $this->validate->verify(array(
+     "name" => 'required|string'
+ )
+ )
+ if($this->validate->fail()){
+     $this->response->echoError(Response::ERROR,$this->validate->errMsg());
+ }
+ ```
+ 
+ 5、文件目录
  
  |-conf 配置<br/>
  |-contoller 控制器<br/>
@@ -22,7 +35,7 @@
  |-index.php 入口文件<br/>
  |-route.php 路由逻辑<br/>
  
- 5、框架功能并不完善、但是开发小型项目足够、后期会酌情增加功能
+ 6、library现在包括 **数据库、日志、二维码、redis操作、校验类、视图类、微信接口、请求返回** 框架功能并不完善、但是开发小型项目足够、后期会酌情增加功能
  
  
  
