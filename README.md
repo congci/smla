@@ -13,14 +13,14 @@
  
  4、文件目录
  
- |-conf 配置
- |-contoller 控制器
- |-library 功能性文件
- |-log 默认日志所在
- |-models 数据逻辑
- |-view 视图部分
- |-index.php 入口文件
- |-route.php 路由逻辑
+ |-conf 配置<br/>
+ |-contoller 控制器<br/>
+ |-library 功能性文件<br/>
+ |-log 默认日志所在<br/>
+ |-models 数据逻辑<br/>
+ |-view 视图部分<br/>
+ |-index.php 入口文件<br/>
+ |-route.php 路由逻辑<br/>
  
  5、框架功能并不完善、但是开发小型项目足够、后期会酌情增加功能
  
