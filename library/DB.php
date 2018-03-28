@@ -115,7 +115,7 @@ class DB
         $params = is_array($where) ? array_values($where) : [];
         $params2 = is_array($data) ? array_values($data) : [];
         
-        return $this->update(PdoDb::DSN_TYPE_MASTER,$sql,array_merge($params,$params2));
+        return $this->update(PdoDb::DSN_TYPE_MASTER,$sql,array_merge($params2,$params));
     }
 
 
@@ -385,7 +385,7 @@ class DB
         $sql = trim($sql,',') . $wherstr;
         $params = is_array($where) ? array_values($where) : [];
         $params2 = is_array($data) ? array_values($data) : [];
-        return $this->update(PdoDb::DSN_TYPE_MASTER,$sql,array_merge($params,$params2));
+        return $this->update(PdoDb::DSN_TYPE_MASTER,$sql,array_merge($params2,$params));
     }
 
     protected function sendnotice($content, $title){
