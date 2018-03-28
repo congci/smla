@@ -92,7 +92,7 @@ class Route
             $params = [];
             //匹配的和设定的个数不一定一致、去除正则?的影响
             foreach ($matches as $key => $v){
-                $params[$this->params[$key]] = $v;
+                $params[$this->params[$key-1]] = $v;
             }
             $_REQUEST += $params;
             if($this->verb == 'GET'){
