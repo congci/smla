@@ -1,7 +1,7 @@
 <?php
 //debug、 info、 notice、 warning、 error、 critical、 alert 以及 emergency
 class Log{
-    public $file = ROOT . '/log/info.log';
+    protected $file = ROOT . '/log/info.log';
     protected $event;
     protected $time;
 
@@ -18,6 +18,13 @@ class Log{
                 $this->message(...$arguments);
 
         }
+    }
+
+    public function setLogFile($file){
+        if(!$file || $this->file == $file){
+            return false;
+        }
+        $this->file = $file;
     }
 
 

@@ -28,7 +28,7 @@ class Request{
             if(isset($params[$name])){
                 return $params[$name];
             }else{
-                return "";
+                return NULL;
             }
         }
         $data = [];
@@ -37,7 +37,7 @@ class Request{
                 if(isset($params[$v])){
                     $data[$v] = $params[$v];
                 }else{
-                    $data[$v] = "";
+                    $data[$v] = NULL;
                 }
             }
         }
